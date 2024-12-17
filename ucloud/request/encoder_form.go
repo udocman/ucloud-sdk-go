@@ -88,7 +88,7 @@ func encodeMapToForm(rv *reflect.Value, prefix string) (map[string]string, error
 
 		name := mapKey.String()
 		if prefix != "" {
-			name = fmt.Sprintf("%s.%s", prefix, name)
+			name = fmt.Sprintf("%s[%s]", prefix, name)
 		}
 
 		switch f.Kind() {
