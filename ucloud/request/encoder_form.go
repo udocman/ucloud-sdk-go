@@ -106,7 +106,7 @@ func encodeMapToForm(rv *reflect.Value, prefix string) (map[string]string, error
 					continue
 				}
 
-				keyPrefix := fmt.Sprintf("%s.%v", name, n)
+				keyPrefix := fmt.Sprintf("%s[%v]", name, n)
 				switch item.Kind() {
 				case reflect.Map:
 					kv, err := encodeMapToForm(&item, keyPrefix)
