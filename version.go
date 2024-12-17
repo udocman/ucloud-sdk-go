@@ -1,4 +1,4 @@
-package ucloud-sdk-go
+package sdk
 
 const (
 	// Version is the version of this package.
